@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .div-body {
+            width: fit-content;
+            border: 1px solid black;
+            margin: auto;
+        }
+        .div-parent {
+            position: relative;
+            border: 2px solid blue;
+            background-color: aliceblue;
+            width: 500px;
+            height: 400px;
+            
+        }
+        .div-1 {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            padding: 20px;
+            border: 5px dashed blueviolet;
+        }
+        .div-2 {
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            padding: 20px;
+            border: 5px dotted red;
+        }
+        .center {
+            position: absolute;
+            top: 35%;
+            left: 25%;
+            padding: 40px;
+            border: 5px ridge orangered;
+            border-radius: 50%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 25px;
+            font-weight: bold;
+            text-shadow: 4px 4px 4px red;
+        }
+        .div-3 {
+            position: absolute;
+            bottom: 0%;
+            left: 0%;
+            padding: 20px;
+            border: 5px ridge orangered;
+        }
+        .div-4 {
+            position: absolute;
+            bottom: 0%;
+            right: 0%;
+            padding: 20px;
+            border: 5px double brown;
+        }
+        .image {
+            position: absolute;
+            width: 80px;
+            border-radius: 50%;
+        }
+        .notify {
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            border: none;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            
+        }
+        .img-2 {
+            position: absolute;
+            bottom: 0px;
+            left: 40%;
+            border: none;
+            width: 90px;
+            height: 90px;
+        }
+        .div-body-2 {
+            width: 500px;
+            border: 1px solid black;
+            margin: auto;
+            margin-top: 100px;
+        }
+        .h1-class {
+            font-size: 90px;
+            line-height: 15px;
+            color: navy;
+            text-shadow: 5px 4px lightblue;
+            text-align: center;
+        }
+        .h2-class {
+            font-family: cursive;
+            font-size: 80px;
+            line-height: 0px;
+            text-align: center;
+            font-weight: bolder;
+            color: white;
+            text-shadow: 5px 4px 3px darkblue;
+        }
+        .pro-track {
+            font-size: 30px;
+            text-align: center;
+            font-weight: bold;
+            color: navy;
+        }
+        .web-dev {
+            color: white;
+            border-radius: 30px;
+            padding: 7px 25px;
+            
+        }
+        .duration {
+            padding: 7px 25px;
+            border-radius: 10px;
+            border: 1px solid lightskyblue;
+            width: fit-content;
+            font-size: 14px;
+            margin-left: 18px;
+            color: navy;
+        }
+        .address {
+            padding: 7px 25px;
+            border-radius: 10px;
+            width: 300px;
+            margin-left: 20px;
+            font-size: 14px;
+            color: navy;
+        }
+        .enquiries {
+            background-color: navy;
+            height: 50px;
+            color: white;
+            padding-top: 25px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div-body">
+        <div class="div-parent">
+            <div class="div-1">Integrity</div>
+            <div class="div-2">Commitment</div>
+            <div class="center">SUCCESS!!!</div>
+            <div class="div-3">Consistency</div>
+            <div class="img-2">
+                <div class="notify">24</div>
+                <img class="image" src="./IMAGES/Squad-hero-image1.png" alt="">
+            </div>
+            <div class="div-4">Hardworking</div>
+        </div>
+    </div>
+    <div class="div-body-2">
+        <h1 class="h1-class">CODING</h1>
+        <h2 class="h2-class">School</h2>
+        <p class="pro-track">Become a Pro in any of</p>
+        <p class="pro-track" style="line-height: 0px;">the track for just <a style="padding: 3px 10px; 
+            background-color: navy; color:aliceblue; border-radius:10px; font-weight:lighter">#300,000</a></p>
+            <br>
+        <p style="text-align: center;"><a style="background-color: rgb(243, 6, 97);" class="web-dev">Web Development</a>  <a style="background-color: rgb(41, 168, 41);" class="web-dev">App Development</a></p>
+        <br>
+        <p style="text-align: center; line-height: 0px;"><a style="background-color: orange;" class="web-dev">Data Science</a>  <a style="background-color: purple;" class="web-dev">Graphics Design</a></p>
+        <br>
+        <p style="text-align: center; line-height: 0px;"><a style="background-color: rgb(197, 113, 16);" 
+            class="web-dev">Product Design</a></p>
+        <br>
+        <div class="duration"><b>Duration of program: 1 Year.</b></div>
+        <div class="address"><b>No. 35B, Opposite ASEK Pharmacy, St. Mattias Junction, Orogun, Ibadan.</b></div>
+        <br>
+        <div class="enquiries">For Enquiries: <a style="padding: 4px 20px; background-color:aliceblue;
+            border-radius: 0px 0px 20px 0px; color: navy;"><b>09032565436</b></a></div>
+    </div>
+    
+    
+</body>
+</html>

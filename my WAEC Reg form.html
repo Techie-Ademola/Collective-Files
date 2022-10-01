@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADEX WAEC REG FORM</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        h1 {
+            font-weight: 80px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-left: 130px;
+            text-transform: uppercase;
+            font-size: 2vw;
+            padding-top: 37px;
+            line-height: 4px;
+        }
+        .titles {
+            color: yellow;
+            background-color: midnightblue;
+
+        }
+        .logo {
+            margin: none;
+            width: 100px;
+            height: 100px;
+            float: left;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .para {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(39, 171, 211);
+            font-weight: bold;
+            font-size: 1vw;
+            margin-left: 130px;
+            line-height: 8px;
+        }
+
+        table {
+            /* width: 100%; */
+            margin: auto;
+            border: none;
+            border-collapse: collapse;
+            height: 400px;
+            outline: none;
+        }
+        input {
+            width: 300px;
+            height: 30px;
+        }
+        .biodata {
+            padding: 10px;
+
+        }
+        .biodataform {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .dive {
+            background-image: url("IMAGES/grenwhi\ 5.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="dive">
+        <img class="logo" src="./IMAGES/waec-logo.png" alt="">
+        <h1>west african senior certificate examinations</h1>
+        <p class="para">FOR PRIVATE CANDIDATES</p>
+        <br>
+        <div style="padding-left: 150px; padding-right: 150px;">
+            <div class="titles">
+                <h5 class="biodata">BIO DATA</h5>
+            </div>
+            <div>
+                <form action="">
+                    <div class="biodataform">
+                        <div style="line-height:36px; font-size: 1vw; width: 400px;margin-left: 20px;">
+                            <label for="name">Name*</label><br>
+                            <label for="gender">Gender*</label><br>
+                            <label for="disability">Disability (if applicable)*</label><br>
+                            <label for="m_status">Marital Status*</label><br>
+                            <label for="m_name">Maiden Name (if applicable)*</label><br>
+                            <label for="dob">Date of Birth*</label><br>
+                            <label for="nationality">Nationality*</label><br>
+                            <label for="s_origin">State of Origin*</label>
+                        </div>
+                        <div>
+                            <input style="height: 20px; margin-top: 10px;" type="text"><br>
+                            <input style="height: 20px; margin-top: 10px;" type="text"><br>
+                            <input style="height: 20px; margin-top: 10px;" type="text"><br>
+                            <input style="height: 20px; margin-top: 10px;" type="text"><br>
+                            <input style="height: 20px; margin-top: 10px;" type="text"><br>
+                            <input style="height: 20px; margin-top: 10px;" type="date"><br>
+                            <input style="height: 20px; margin-top: 10px;" type="text"><br>
+                            <input style="height: 20px; margin-top: 10px;" type="text">
+                        </div>
+                        <div style="width: 550px; height:270px">
+                            <div style="width: 200px; border:3px solid rgb(3, 23, 29); height: 220px; float:right;margin-right: 20px;"></div>
+                        </div>
+                    </div>
+                    <div class="titles">
+                        <h5 class="biodata">CONTACT INFORMATION</h5>
+                    </div>
+                    <div class="biodataform" style="font-size: 1vw; margin-left: 15px;">
+                        <div>
+                            <label for="telephone">Telephone*</label>
+                            <input style="margin-left: 10px;" type="text">
+                            <fieldset  style="width: 400px;">
+                                <legend><h5>RESIDENTIAL INFORMATION</h5></legend>
+                                <label style="float: left;" for="address">Address*</label>
+                                <textarea style="margin-left: 30px;" name="address" id="address" cols="30" rows="4"></textarea>
+                                <br>
+                                <label for="city">City*</label>
+                                <input style="margin-left: 50px; width: 257px;" type="text"><br>
+                                <label for="state">State*</label>
+                                <input style="margin-left: 40px; width: 257px; margin-top: 7px;" type="text"><br>
+                            </fieldset>
+                        </div>
+                        <div style="margin-left: 15px;">
+                            <label for="telephone">Email*</label>
+                            <input style="margin-left: 1px;" type="text">
+                            <fieldset  style="width: 400px;">
+                                <legend><h5>RESIDENTIAL INFORMATION</h5></legend>
+                                <label style="float: left;" for="address">Address*</label>
+                                <textarea style="margin-left: 30px;" name="address" id="address" cols="30" rows="4"></textarea>
+                                <br>
+                                <label for="city">City*</label>
+                                <input style="margin-left: 50px; width: 257px;" type="text"><br>
+                                <label for="state">State*</label>
+                                <input style="margin-left: 40px; width: 257px; margin-top: 7px;" type="text"><br>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="titles">
+                        <h5 class="biodata">EXAMINATION LOCATION</h5>
+                    </div>
+                    <div style="font-size: 1vw;">
+                        <label style="margin-left: 10px;" for="state">State*</label>
+                        <input style="margin-left: 10px;" type="text">
+                        <label style="margin-left: 30px;" for="exam_town">Preferred Examination Town*</label>
+                        <input style="margin-left: 10px;" type="text">
+                    </div>
+                    <div class="titles">
+                        <h5 class="biodata">EXAMINATION SUBJECTS</h5>
+                    </div>
+                    <div>
+                        <h5>COMPULSORY SUBJECTS</h5>
+                    </div>
+                    <div style="text-align:left;font-size: 1vw; margin-left: 10px;">
+                        <input style="text-align:left;margin-left: 10px; height: 15px; width: 15px;" type="checkbox" checked="checked" disabled="disabled">
+                        <label style="text-align:left;margin-left: 10px; height: 15px; width: 15px;" for="name">English Language</label>
+                        <input style="margin-left: 200px; height: 15px; width: 15px;" type="checkbox" checked="checked" disabled="disabled">
+                        <label style="text-align:left;margin-left: 10px;" for="gen_math">General Mathematics</label>
+                    </div>
+                    <div>
+                        <h5>OTHER SUBJECTS</h5>
+                    </div>
+                    <div class="biodataform">
+                        <div style="font-size: 1vw; margin-left: 10px; width: 400px;">
+                            <input style="text-align:left;margin-left: 10px; height: 15px; width: 15px;" type="checkbox">
+                            <label style="text-align:left;margin-left: 3px; height: 15px; width: 15px;" for="name">COMMERCE</label><br>
+                            <input style="text-align:left;margin-left: 10px; height: 15px; width: 15px;" type="checkbox">
+                            <label style="text-align:left;margin-left: 3px; height: 15px; width: 15px;" for="name">ECONOMICS</label><br>
+                            <input style="text-align:left;margin-left: 10px; height: 15px; width: 15px;" type="checkbox">
+                            <label style="text-align:left;margin-left: 3px; height: 15px; width: 15px;" for="name">ISLAMIC STUDIES</label><br>
+                            <input style="text-align:left;margin-left: 10px; height: 15px; width: 15px;" type="checkbox">
+                            <label style="text-align:left;margin-left: 3px; height: 15px; width: 15px;" for="name">ENGLISH LANGUAGE</label><br>
+                            <input style="text-align:left;margin-left: 10px; height: 15px; width: 15px;" type="checkbox">
+                            <label style="text-align:left;margin-left: 3px; height: 15px; width: 15px;" for="name">YORUBA</label><br>
+                            <input style="text-align:left;margin-left: 10px; height: 15px; width: 15px;" type="checkbox">
+                            <label style="text-align:left;margin-left: 3px; height: 15px; width: 15px;" for="name">AGRICULTURAL SCIENCE</label><br>
+                            <input style="text-align:left;margin-left: 10px; height: 15px; width: 15px;" type="checkbox">
+                            <label style="text-align:left;margin-left: 3px; height: 15px; width: 15px;" for="name">PHYSICS</label><br>
+                        </div>
+                        <div style="font-size: 1vw; margin-left: 10px; width: 400px;">
+                            <input style="text-align:left;margin-left: 10px; height: 15px; width: 15px;" type="checkbox">
+                            <label style="text-align:left;margin-left: 3px; height: 15px; width: 15px;" for="name">FINANCIAL ACCOUNTING</label><br>
+                            <input style="text-align:left;margin-left: 10px; height: 15px; width: 15px;" type="checkbox">
+                            <label style="text-align:left;margin-left: 3px; height: 15px; width: 15px;" for="name">GEOGRAPHY</label><br>
+                            <input style="text-align:left;margin-left: 10px; height: 15px; width: 15px;" type="checkbox">
+                            <label style="text-align:left;margin-left: 3px; height: 15px; width: 15px;" for="name">LITERATURE IN ENGLISH</label><br>
+                            <input style="text-align:left;margin-left: 10px; height: 15px; width: 15px;" type="checkbox">
+                            <label style="text-align:left;margin-left: 3px; height: 15px; width: 15px;" for="name">HAUSA</label><br>
+                            <input style="text-align:left;margin-left: 10px; height: 15px; width: 15px;" type="checkbox">
+                            <label style="text-align:left;margin-left: 3px; height: 15px; width: 15px;" for="name">FURTHER MATHEMATICS</label><br>
+                            <input style="text-align:left;margin-left: 10px; height: 15px; width: 15px;" type="checkbox">
+                            <label style="text-align:left;margin-left: 3px; height: 15px; width: 15px;" for="name">BIOLOGY</label><br>
+                        </div>
+                        <div style="font-size: 1vw;margin-left: 10px; width: 700px;">
+                            <input style="text-align:left;margin-left: 10px; height: 15px; width: 15px;" type="checkbox">
+                            <label style="text-align:left;margin-left: 3px; height: 15px; width: 15px;" for="name">CHRISTIAN RELIGIOUS STUDIES</label><br>
+                            <input style="text-align:left;margin-left: 10px; height: 15px; width: 15px;" type="checkbox">
+                            <label style="text-align:left;margin-left: 3px; height: 15px; width: 15px;" for="name">GOVERNMENT</label><br>
+                            <input style="text-align:left;margin-left: 10px; height: 15px; width: 15px;" type="checkbox">
+                            <label style="text-align:left;margin-left: 3px; height: 15px; width: 15px;" for="name">CIVIC EDUCATION</label><br>
+                            <input style="text-align:left;margin-left: 10px; height: 15px; width: 15px;" type="checkbox">
+                            <label style="text-align:left;margin-left: 3px; height: 15px; width: 15px;" for="name">IGBO</label><br>
+                            <input style="text-align:left;margin-left: 10px; height: 15px; width: 15px;" type="checkbox">
+                            <label style="text-align:left;margin-left: 3px; height: 15px; width: 15px;" for="name">GENERAL MATHEMATICS</label><br>
+                            <input style="text-align:left;margin-left: 10px; height: 15px; width: 15px;" type="checkbox">
+                            <label style="text-align:left;margin-left: 3px; height: 15px; width: 15px;" for="name">CHEMISTRY</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br><br>
+        <button type="button" onclick="window.alert('You have Successfully submitted your Form details')" style="margin-bottom:10px; margin-left: 50%;">Click</button>
+        <marquee behavior="" direction="right" style="position: sticky; bottom: 0; color: darkred; 
+        padding: 10px 20px; background-color: darkgray;">
+        Please note that all fields with * are mandatory</marquee>
+    </div>
+
+    
+</body>
+</html>

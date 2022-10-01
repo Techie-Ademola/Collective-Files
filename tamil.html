@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>    
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+<title>My Dare Game</title>
+<meta property="description" content="Welcome to Techie.com Game Hub, We have a huge collection of fun games for you. Play them with your friends and have fun. Dare, Relation Finder, Love Calculator, Friendship Calculator, etc." />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Welcome to Techie.com Game Hub, We have a huge collection of fun games for you. Play them with your friends and have fun. Dare, Relation Finder, Love Calculator, Friendship Calculator, etc." />
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+    * {
+        transition: all .3s ease-in-out;
+    }
+    body{
+        background-color: aliceblue;
+        font-family: sans-serif;
+        color: #393939;
+        font-weight: 400;
+        font-size: 13px;
+        padding-bottom: 200px;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+    .opt {
+        padding-left: 5px;
+        padding-right: 5px;
+        /* background-color:lightblue; */
+        color: #111;
+        /* padding-right: 20px; */
+    }
+    option {
+        padding: 0px !important;
+    }
+    .h-100 {
+        overflow: hidden;
+    }
+    
+    .logo{
+        margin-top: 100px;
+        font-size: 55px;
+        font-family: 'Kalam', cursive;
+        margin-bottom: 50px;
+        animation: pulse 2s ease-in infinite;   
+    }
+    .logo img{
+        display: inline-block;
+        width: 150px;
+    }
+    .logo img:hover {
+        filter: grayscale(90%);
+        transform: translateY(-5px);
+    }
+    @keyframes pulse {
+        25% {
+            transform: scale(1.0);
+        }
+
+        75% {
+            transform: scale(1.1);
+        }
+    }
+    .custom-text{
+        font-size: 20px;
+        font-family: 'Montserrat', sans-serif;
+        color: #393939;
+        font-style: italic;
+    }
+    .card a:hover{
+        text-decoration: none;
+    }
+    .card img {
+        width: 100%;
+    }
+    .card img:hover {
+        transform: translateY(5px);
+        transition: .3s ease-in-out;
+    }
+    .footer {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        position: absolute;
+        padding: 12px 20px;
+        text-align: center;
+        background-color: #fff;
+        border-top: 1px solid #e6e5e5;
+        display: flex;
+        justify-content: space-between !important;
+    }
+    .footer_logo {
+        width: fit-content;
+        text-align: left;
+        font-size: 16px;
+    }
+    .footer_logo img {
+        width: 50px;
+    }
+
+    .footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .footer ul li {
+        display: inline-block;
+        font-size: 16px;
+    }
+
+    .footer a{
+        color: #666;
+    }
+    .footer a:hover {
+        color: #111;
+    }
+    @media screen and (max-width: 600px) {
+        .container {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .logo {
+            font-size: 30px;
+        }
+        .logo img {
+            width: 80px !important;
+        }
+        .footer {
+            display: block;
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+        }
+        .footer ul li {
+            font-size: 14px;
+            display: inline-block;
+            text-align: left;
+            
+        }
+    }
+</style>
+
+
+
+<div class="pt-4 ml-auto mr-5" style="width: fit-content" id="to_top">
+<select class="btn btn-default opt w-100">
+<option class="bg-light" value="#">Choose language</option>
+<option class="bg-light" value="">English (U.K)</option>
+<option class="bg-light" value="">Arabic</option>
+<option class="bg-light" value="">Francais</option>
+<option class="bg-light" value="">Chinese</option>
+<option class="bg-light" value="">Hindi</option>
+</select>
+</div> 
+</head>
+<body>
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-12 text-center">
+<div class="logo mx-auto animate__animated animate__jackInTheBox">
+<img src="./IMAGES/Techie_logo.png"/><br/>
+Techie Game Hub
+</div>
+</div>
+</div>
+<div class="row row justify-content-center">
+<div class="col-sm-12 col-md-8">
+<div class="container">
+<div class="row">
+<div class="col-sm-6 mb-3">
+<div class="card h-100">
+<a href="">
+<img class="card-img-top" src="https://tamil.piclut.com/assets/images/name.jpg" alt="Friendship Dare">
+<div class="card-body">
+<p class="card-text custom-text">What does your name means?</p>
+</div>
+</a>
+</div>
+</div>
+<div class="col-sm-6 mb-3">
+<div class="card h-100">
+<a href="">
+<img class="card-img-top h-75" src="https://hindi.piclut.com/assets/images/wkp.png" alt="Friendship Dare">
+<div class="card-body">
+<p class="card-text custom-text">Know the kind of person you are</p>
+</div>
+</a>
+</div>
+</div>
+<div class="col-sm-6 mb-3">
+<div class="card h-100">
+<a href="">
+<img class="card-img-top" src="https://tamil.piclut.com/assets/images/Rama.jpg" alt="Friendship Dare">
+<div class="card-body">
+<p class="card-text custom-text">Who do you Love most?</p>
+</div>
+</a>
+</div>
+</div>
+<div class="col-sm-6 mb-3">
+<div class="card h-100">
+<a href="">
+<img class="card-img-top" src="https://tamil.piclut.com/assets/images/tamact.jpeg" alt="Friendship Dare">
+<div class="card-body">
+<p class="card-text custom-text">Who's your best Actor?</p>
+</div>
+</a>
+</div>
+</div>
+<div class="col-sm-6 mb-3">
+<div class="card h-100">
+<a href="">
+<img class="card-img-top" src="https://tamil.piclut.com/assets/images/dare2.jpg" alt="Friendship Dare">
+<div class="card-body">
+<p class="card-text custom-text">Go for Friendship Challenge</p>
+</div>
+</a>
+</div>
+</div>
+<div class="col-sm-6 mb-3">
+<div class="card h-100">
+<a href="">
+<img class="card-img-top" src="https://tamil.piclut.com/assets/images/cartoon.jpg" alt="Friendship Dare">
+<div class="card-body">
+<p class="card-text custom-text">Which Cartoon are you?</p>
+</div>
+</a>
+</div>
+</div>
+<div class="col-sm-6 mb-3">
+<div class="card h-100">
+<a href="">
+<img class="card-img-top" src="https://tamil.piclut.com/assets/images/secret.jpg" alt="Friendship Dare">
+<div class="card-body">
+<p class="card-text custom-text">Secret Wall</p>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer px-5">
+    <div class="footer_logo pl-2">
+        <a href="#to_top"><img class="pb-3" src="./IMAGES/Techie_logo.png" alt=""></a> Game Hub
+    </div>
+    <ul class="pt-3">
+        <li><a class="mx-3" href="">Home</a></li>
+        <li><a class="mx-3" href="">About Us</a></li>
+        <li><a class="mx-3" href="">Privacy Policy</a></li>
+        <li><a class="mx-3" href="">Contact Us</a></li>
+    </ul>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="8169cbf238bb31a65ae879db-text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous" type="8169cbf238bb31a65ae879db-text/javascript"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous" type="8169cbf238bb31a65ae879db-text/javascript"></script>
+<script type="8169cbf238bb31a65ae879db-text/javascript"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/0c390bb7a0.js" crossorigin="anonymous"></script>
+</html> 

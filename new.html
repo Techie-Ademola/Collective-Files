@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <style>
+        body {
+          font-family: "Lato", sans-serif;
+          box-sizing: border-box;
+          background-color: #777;
+        }
+        
+        .sidenav {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          right: 0;
+          background-color: #111;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+        }
+        
+        .sidenav a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+        }
+        
+        .sidenav a:hover {
+          color: #f1f1f1;
+        }
+        
+        .sidenav .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          margin-left: 50px;
+        }
+        
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+          .sidenav a {font-size: 18px;}
+        }
+
+        .tri-box {
+            position: relative;
+            margin: auto;
+            /* margin-top: 50px; */
+            background-color: transparent;
+            width: 900px !important;
+            height: 500px;
+            box-sizing: border-box;
+        }
+        .triangle {
+            margin: auto;
+            width: 0;
+            height: 0;
+            border-left: 125px solid transparent;
+            border-right: 125px solid transparent;
+            border-top: 260px solid #2b3b4d;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            text-shadow: 0px 5px 10px black;
+            z-index: 100;
+          transition: all .1s;
+        }
+        .triangle:first-of-type {
+            border-top-color: #563d7d;
+            transform: translate(-50%, -40%);
+        }
+        .triangle:last-of-type {
+            border-top-color: #2b3b4d;
+            transform: translate(-50%, -20%);
+            z-index: 1;
+        }
+
+        .my_vue {
+          width: 260px;
+          height: 270px;
+          position: absolute;
+          top: 34%;
+          left: 83px;
+          z-index: 9999;
+          transition: all .1s;
+          text-shadow: 0px 5px 10px black;
+        }
+        
+        .my_b {
+          position: absolute;
+          top: -295px;
+          left: -50px;
+          font-size: 150px;
+          font-weight: bold;
+          color: white;
+        }
+
+        h1 {
+          font-size: 80px;
+          color: #fff;
+          text-align: center;
+          text-shadow: 0px 0px 5px black;
+        }
+        .vue {
+          font-size: 80px;
+          color: #42b883;
+        }
+        </style>
+</head>
+<body>
+    <!-- <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+      </div>
+      
+      <h2>Animated Sidenav Example</h2>
+      <p>Click on the element below to open the side navigation menu.</p>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span> -->
+
+      <div class="col-4 tri-box" id="tri_box">
+        <!-- <div class="triangle"></div> -->
+        <div class="triangle" id="triangle_1"><span class="my_b">B</span></div>
+        <div class="triangle" id="triangle_2"></div>
+        <img class="my_vue" src="./IMAGES/my-vue.png" alt="" id="vue_v">
+    </div>
+    <h1>Bootstrap<span class="vue">Vue</span> Logo Design</h1>
+
+    <script>
+        const tri_box = document.getElementById('tri_box')
+        const triangle_1 = document.getElementById('triangle_1')
+        const triangle_2 = document.getElementById('triangle_2')
+        const vue_v = document.getElementById('vue_v')
+        
+        tri_box.addEventListener('mouseover', () => triangle_1.style.top = "34%")
+        tri_box.addEventListener('mouseleave', () => triangle_1.style.top = "40%")
+        tri_box.addEventListener('mouseover', () => triangle_2.style.borderLeft = "145px solid transparent")
+        tri_box.addEventListener('mouseover', () => triangle_2.style.borderRight = "145px solid transparent")
+        tri_box.addEventListener('mouseover', () => triangle_2.style.borderTop = "270px solid #2b3b4d")
+
+        tri_box.addEventListener('mouseleave', () => triangle_2.style.borderLeft = "125px solid transparent")
+        tri_box.addEventListener('mouseleave', () => triangle_2.style.borderRight = "125px solid transparent")
+        tri_box.addEventListener('mouseleave', () => triangle_2.style.borderTop = "260px solid #2b3b4d")
+
+        tri_box.addEventListener('mouseover', () => vue_v.style.transform = "translateY(60px)")
+        tri_box.addEventListener('mouseleave', () => vue_v.style.transform = "translateY(0px)")
+
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.2)";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.body.style.backgroundColor = "white";
+
+      }
+    </script>
+
+    <script>
+        // var time = new Date();
+        // console.log(
+        // time.toLocaleString('en-US', { hour: 'numeric', hour12: true })
+        // );
+
+        // const today = new Date(new Date().toLocaleString("en-US", {
+        //     day: '2-digit',
+        //     month: '2-digit',
+        //     year: 'numeric',
+        //     hour: '2-digit',
+        //     minute: '2-digit',
+        //     second: '2-digit',
+        //     hour12: true
+        // }));
+        // console.log(today);
+
+        dt = new Date()
+        var hours = dt.getHours()
+        minute = dt.getMinutes();
+        hours = (hours % 12) || 12;
+        console.log("Time is - " + hours + ":" + minute);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/0c390bb7a0.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practices</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>    
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+<style>
+    @font-face{
+        font-display:swap;
+        font-family:myFont;
+        src:url(https://res.cloudinary.com/oluwatoyinah/raw/upload/v1662495482/gomoney/FontsFree-Net-SF-Pro-Rounded-Heavy_qw9bps.woff2)
+    }
+    * {
+        font-family: myFont !important;
+    }
+    body {
+        /* background: #000019; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+    .inset {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        text-align: center;
+        background-color: transparent;
+        text-shadow: -3px -3px 0px white;
+        color: midnightblue;
+        transition: all 1s ease-in-out;
+        overflow: hidden;
+    }  
+    .inset:hover {
+        border: 10px dotted midnightblue;
+        border-radius: 100%;
+    }
+    .outset {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        background-image: url(./IMAGES/cream.jpg);
+        background-size: contain;
+        transition: all 1s ease-in-out;
+        z-index: -1;
+        animation: pulse 4s ease-in infinite;       
+    } 
+    h1 {
+        margin-top: 100px;
+    }
+    .inset p {
+        font-size: 20px;
+    } 
+    .outset:hover, .inset:hover {
+        box-shadow: 0px 130px 100px 10px gray inset;
+        transition: all 1s ease-in-out;
+        color: black;
+    }
+
+    @media screen and (max-width: 1000px) {
+        .inset {
+            border-radius: 100%;
+            transition: all 1s ease-in-out;
+            background-image: url(./IMAGES/category__image6.png);
+            background-color: cornflowerblue;
+            color: crimson;
+            animation: pulse 4s ease-in infinite;       
+        }
+        .outset {
+            background: transparent;
+            box-shadow: none !important;
+        }
+        .inset:hover {
+            box-shadow: 0px -130px 100px 10px wheat inset;
+            transition: all 1s ease-in-out;
+        }
+        h1 {
+            margin-top: 100px;
+        }
+        
+    }
+    
+    @media screen and (max-width: 900px) {
+        .inset {
+            border-radius: 20% 100% 100% 100%;
+            transition: all 1s ease-in-out;
+            background-image: url(./IMAGES/simp\ \ des\ 5.jpg);
+            background-color: cornflowerblue;
+            color: crimson;
+        } 
+    }
+
+    @media screen and (max-width: 800px) {
+        .inset {
+            border-radius: 100% 100% 20% 100%;
+            transition: all 1s ease-in-out;
+            background-image: url(./IMAGES/Squad-hero-image1.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: cornflowerblue;
+            color: #02025a;
+        } 
+    }
+
+    @media screen and (max-width: 700px) {
+        .inset {
+            border-radius: 100% 20% 100% 100%;
+            transition: all 1s ease-in-out;
+            background-image: url(./IMAGES/simp\ des\ 1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: cornflowerblue;
+            color: #02025a;
+        } 
+    }
+
+    @media screen and (max-width: 600px) {
+        .inset {
+            border-radius: 100% 100% 100% 20%;
+            transition: all 1s ease-in-out;
+            background-image: url(./IMAGES/clock\ logo.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: cornflowerblue;
+            color: crimson;
+        } 
+    }
+
+    @media screen and (max-width: 500px) {
+        .inset {
+            border-radius: 100% 100% 20% 20%;
+            transition: all 1s ease-in-out;
+            background-image: url(./IMAGES/firefox-logo.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: cornflowerblue;
+            color: #02025a;
+        } 
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1.0);
+        }
+
+        50% {
+            transform: scale(1.2);
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="inset">
+    <div class="outset animate__animated animate__fadeIn"></div>
+    <h1>JavaScript Dates</h1>
+        <h2>The getFullYear() Method</h2>
+
+        <p>getFullYear() returns the year with four digits:</p>
+
+        <p id="demo"></p>
+</div>
+
+<!-- <div class="myDemo-2 pr-3"><span id="myDemo-2"></span> <sup class="date_meridian" id="myAMPM_4"><small>PM</small></sup></div> -->
+
+    <!-- <div class="row image_row d-flex ml-1 pl-1" style="justify-content: space-around !important;">
+    <div class="img_hover mx-2 px-1">
+        <a href=""><img title="Firefox" class="image_links" src="./IMAGES/firefox-logo.png" alt=""></a>
+    </div>
+    <div class="img_hover mx-2 px-1">
+        <a href="#"><img title="EzCloud Webpage" class="image_links" src="./IMAGES/Ez cloud logo 2.png" alt="" style="background-color: cornflowerblue; border: 3px solid cornflowerblue;"></a>
+    </div>
+    <div class="img_hover mx-2 px-1">
+        <a href="#"><img title="Figma" class="image_links" src="./IMAGES/figma logo.png" alt=""></a>
+    </div>
+    <div class="img_hover mx-2 px-1">
+        <a href="#"><img title="Twitter" class="image_links" src="./IMAGES/twitter logo.png" alt="" style="background-color: whitesmoke; border: 3px solid whitesmoke;"></a>
+    </div> -->
+
+<script>
+    const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    const d = new Date();
+    let date = d.getDate();
+    let name = month[d.getMonth()];
+    let year = d.getFullYear();
+    // month += 1
+    let myDate = date + '-' + name + '-' + year;
+    document.getElementById("demo").innerHTML = myDate;
+</script>
+
+<script>
+    // const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    
+    // const d = new Date();
+    // let name = month[d.getMonth()];
+    // document.getElementById("demo").innerHTML = name;
+
+
+    // function openBooting() {
+        //     document.getElementById('open_Booting').style.display = 'block';
+        //     document.getElementById('open_Buton').style.display = 'none';
+        //     document.getElementById('close_Booting').style.display = 'none';
+        //     document.getElementById('close_Buton').style.display = 'block';
+        //     document.querySelector('.homes').style.display = 'none';
+
+        //     myTime()
+            
+        // }
+
+        // function closeBooting() {
+        //     document.getElementById('open_Booting').style.display = 'none';
+        //     document.getElementById('open_Buton').style.display = 'block';
+        //     document.getElementById('close_Booting').style.display = 'block';
+        //     document.getElementById('close_Buton').style.display = 'none';
+        //     document.querySelector('.homes').style.display = 'none';
+
+        //     myTime()
+            
+        // }
+
+
+        // const clock = document.getElementById("myDemo")
+    // const tick = () => {
+    //     const time = new Date()
+    //     const h = time.getHours()
+    //     const m = time.getMinutes()
+    //     // const s = time.getSeconds()
+
+    //     const myTime = `<span>${time}</span>`
+    //     clock.innerHTML = myTime
+    // }
+    // setInterval(tick, 1000)
+
+
+    // const time = new Date();
+        // let hour = time.getHours();
+        // // let m = time.getMinutes()
+
+        // const myTime = `<span>${time}</span>`
+        // document.getElementById("myDemo").innerHTML = myTime;
+
+    // function myHour() {
+    //     const a = new Date();
+    //     let hour = a.getHours();
+    //     document.getElementById("myDemo").innerHTML = hour;
+    // }
+    // myHour()
+
+    // function myMinute() {
+    //     const a = new Date();
+    //     let minute = a.getMinutes();
+    //     document.getElementById("myDemo-2").innerHTML = minute;
+    // }
+    // myMinute()
+
+    // function mynewHour() {
+    //     const d = new Date();
+    //     let hour = d.getHours();
+    //     document.getElementById("demo").innerHTML = hour;
+    // }
+    // mynewHour()
+
+    // function mynewMinute() {
+    //     const d = new Date();
+    //     let minute = d.getMinutes();
+    //     document.getElementById("demo-2").innerHTML = minute;
+    // }
+    // mynewMinute()
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/0c390bb7a0.js" crossorigin="anonymous"></script>
+</body>
+</html>

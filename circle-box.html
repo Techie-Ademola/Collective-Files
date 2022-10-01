@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Media Queries in JS</title>
+    <meta charset="utf-8">
+    <meta name="description">
+    <meta name="keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            font-family: "Grandstander", serif;
+            background: #1d2d50;
+            color: #fff; 
+        }
+            
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box; 
+        }
+    
+        main .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center; 
+        }
+        
+        main .container h2 {
+            text-align: center;
+            font-size: 30px; 
+        }
+        
+        main .container .box_one {
+            width: 200px;
+            height: 200px;
+            border: 5px solid #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0px;
+            transition: 2s all ease; 
+        }
+        
+        main .container .box_one span {
+            font-size: 20px;
+            text-align: center; 
+        }
+        
+        main .container .circle_one {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid #fff;
+            transition: 2s all ease; 
+        }
+        
+        main .container .circle_one span {
+            font-size: 15px;
+            text-align: center; 
+        }
+
+        .view {
+            /* border: 1px solid blue; */
+            border-radius: 5px;
+            padding: 15px 25px;
+            margin-top: 50px;
+            background-color: yellow;
+            color: blue;
+            box-shadow: -5px 5px 0px whitesmoke;
+            transition: .5s ease-in-out;
+            text-decoration: none;
+        }
+
+        .view:hover {
+            background-color: forestgreen;
+            color: white;
+            box-shadow: -10px 10px 0px whitesmoke;
+            transition: .5s ease-in-out;
+        }
+
+        ._hover {
+            border-radius: 5px;
+            padding: 20px 35px;
+            margin-top: 50px;
+            background-color: yellow;
+            color: blue;
+            box-shadow: -5px 5px 0px whitesmoke;
+            transition: .5s ease-in-out;
+            text-decoration: none;
+        }
+
+        ._hover:hover {
+            background-color: forestgreen;
+            border-radius: 50px;
+            color: white;
+            box-shadow: -20px 20px 0px whitesmoke;
+            transition: .5s ease-in-out;
+        }
+
+        .card {
+            position: relative;
+            width: 30%;
+            height: 150px;
+            overflow-y: hidden;
+            background-color: cornflowerblue;
+            margin-top: 100px;
+        }
+        .card-div {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 20px;
+            background: transparent;
+            width: 100%;
+            height: 300px;   
+            /* border: 2px solid black; */
+            transition: .3s ease-in-out;
+        }
+
+        .card-div:hover {
+            transform: translateY(-85px);
+            transition: .3s ease-in-out;
+        }
+
+        .card-img {
+            width: 80px;
+            height: 60px;
+            transition: .5s ease-in-out;
+        } 
+        .facial {
+            line-height: 30px; 
+            font-weight: bold;
+            color: midnightblue;
+            font-size: 30px;
+            width: 100%;   
+            padding: 20px 0px;
+            background: transparent;
+        }
+        .bannerDiv {
+            width: 300px;
+            height: 400px;
+            overflow: hidden;
+            margin-top: 50px;
+            margin-bottom: 100px;
+            border: 10px solid palevioletred;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+        }
+        .banner {
+            width: 300px;
+            height: 420px;
+            transition: .3s ease-in-out;
+            align-items: center;
+            justify-content: center;
+            margin-left: -10px;
+        }
+        .banner:hover {
+            transform: translate(10px);
+            width: 280px;
+            height: 400px;
+            transition: .3s ease-in-out;
+        }
+
+        @keyframes dribble {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(50px);
+            }
+        }
+        @keyframes rotation {
+            from {
+                -webkit-transform: rotate(360deg);
+            }
+
+            to {
+                -webkit-transform: rotate(0deg);
+            }
+        }
+
+        @keyframes pulse {
+            25% {
+                transform: scale(0.9);
+            }
+
+            75% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="container">
+            <h2>Example Media Queries in JavaScript</h2>
+            <section class="box_one">
+                <span>I'm a Box</span>
+            </section>
+            <section class="circle_one">
+                <span>I'm a circle</span>
+            </section>
+            <a href="file:///C:/Users/User/ADEMOLA%20CODE%20LIBRARY/MY%20PRACTICAL%20FOLDER/bootsrap/BETTY%20WEB/index.html" target="_blank" class="view">View More</a>
+            <a href="#" class="_hover">Hover More</a>
+            
+        </section>
+        <div class="card">
+            <div class="card-div">
+                <img class="card-img" src="./IMAGES/hand edited.png" alt="">
+                <p class="facial">Facial Makeup</p>
+                <p>Suspendisse quis odio lobortis laoreet libero quis varius tortor.</p>
+            </div> 
+        </div>
+
+        <div class="card">
+            <div class="card-div">
+                <img class="card-img" src="./IMAGES/hand edited.png" alt="">
+                <p class="facial">Eye Makeup</p>
+                <p>Suspendisse quis odio lobortis laoreet libero quis varius tortor.</p>
+            </div> 
+        </div>
+
+        <div class="card">
+            <div class="card-div">
+                <img class="card-img" src="./IMAGES/hand edited.png" alt="">
+                <p class="facial">Haircut Makeup</p>
+                <p>Suspendisse quis odio lobortis laoreet libero quis varius tortor.</p>
+            </div> 
+        </div>
+
+        <div class="bannerDiv">
+            <img class="banner" src="./IMAGES/Banner 2.jpg" alt="">
+        </div>
+    </main>
+
+
+
+    <script>
+        window.addEventListener ( 'load', () => {
+            startQueries()
+            }
+        )
+        
+        const startQueries = () => {
+            let newQuery = window.matchMedia( ' ( max-width: 767px ) ' )
+    
+            const queryListenChanges = query => {
+                if ( query.matches ) {
+                    document.querySelector ( '.box_one' ).style.borderRadius = '50%'
+                    document.querySelector( '.box_one span' ).textContent = `But now I'm a circle `
+                    document.querySelector( '.circle_one' ).style.background = '#fff'
+                    document.querySelector( '.circle_one span' ).style.color = '#1d2d50'
+                } 
+                else {
+                    document.querySelector( '.box_one' ).style.borderRadius = '0%'
+                    document.querySelector( '.box_one span' ).textContent = `I'm a Box again`
+                    document.querySelector( '.circle_one' ).style.background = 'transparent'
+                    document.querySelector( '.circle_one span' ).style.color = '#FFF'
+                }
+            }
+            newQuery.addListener( queryListenChanges ) 
+            queryListenChanges( newQuery )
+        }
+    </script>
+</body>
+</html>
